@@ -13,10 +13,80 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="データ">
+      <UniqueIdentifier>{3e7d3685-4589-49df-975f-cc2412b5a151}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Flatbuffers">
+      <UniqueIdentifier>{e5b73cd3-f2ed-47a9-be8f-1f756bc3203e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ConsoleApplication1.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
+    <ClCompile Include="util.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ToolsAndData\flatc.exe">
+      <Filter>データ</Filter>
+    </None>
+    <None Include="ToolsAndData\MakeMonsterData.bat">
+      <Filter>データ</Filter>
+    </None>
+    <None Include="ToolsAndData\MonsterData.fbs">
+      <Filter>データ</Filter>
+    </None>
+    <None Include="ToolsAndData\MonsterData.json">
+      <Filter>データ</Filter>
+    </None>
+    <None Include="ToolsAndData\MonsterData.xlsm">
+      <Filter>データ</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="flatbuffers\base.h">
+      <Filter>Flatbuffers</Filter>
+    </ClInclude>
+    <ClInclude Include="flatbuffers\code_generators.h">
+      <Filter>Flatbuffers</Filter>
+    </ClInclude>
+    <ClInclude Include="flatbuffers\flatbuffers.h">
+      <Filter>Flatbuffers</Filter>
+    </ClInclude>
+    <ClInclude Include="flatbuffers\flatc.h">
+      <Filter>Flatbuffers</Filter>
+    </ClInclude>
+    <ClInclude Include="flatbuffers\flexbuffers.h">
+      <Filter>Flatbuffers</Filter>
+    </ClInclude>
+    <ClInclude Include="flatbuffers\grpc.h">
+      <Filter>Flatbuffers</Filter>
+    </ClInclude>
+    <ClInclude Include="flatbuffers\hash.h">
+      <Filter>Flatbuffers</Filter>
+    </ClInclude>
+    <ClInclude Include="flatbuffers\idl.h">
+      <Filter>Flatbuffers</Filter>
+    </ClInclude>
+    <ClInclude Include="flatbuffers\minireflect.h">
+      <Filter>Flatbuffers</Filter>
+    </ClInclude>
+    <ClInclude Include="flatbuffers\reflection.h">
+      <Filter>Flatbuffers</Filter>
+    </ClInclude>
+    <ClInclude Include="flatbuffers\reflection_generated.h">
+      <Filter>Flatbuffers</Filter>
+    </ClInclude>
+    <ClInclude Include="flatbuffers\registry.h">
+      <Filter>Flatbuffers</Filter>
+    </ClInclude>
+    <ClInclude Include="flatbuffers\stl_emulation.h">
+      <Filter>Flatbuffers</Filter>
+    </ClInclude>
+    <ClInclude Include="flatbuffers\util.h">
+      <Filter>Flatbuffers</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

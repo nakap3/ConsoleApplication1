@@ -72,6 +72,9 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <CustomBuildAfterTargets>
+    </CustomBuildAfterTargets>
+    <CustomBuildBeforeTargets>ClCompile</CustomBuildBeforeTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -88,11 +91,22 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <CustomBuildStep>
+      <Command>$(ProjectDir)ToolsAndData\MakeMonsterData.bat auto</Command>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs>$(ProjectDir)ToolsAndData\MonsterData.mdfb;$(ProjectDir)ToolsAndData\MonsterData_generated.h;%(Outputs)</Outputs>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Inputs>$(ProjectDir)ToolsAndData\MonsterData.json</Inputs>
+      <Message>モンスターデータを変換します</Message>
+    </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -140,6 +154,30 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ConsoleApplication1.cpp" />
+    <ClCompile Include="util.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ToolsAndData\flatc.exe" />
+    <None Include="ToolsAndData\MakeMonsterData.bat" />
+    <None Include="ToolsAndData\MonsterData.fbs" />
+    <None Include="ToolsAndData\MonsterData.json" />
+    <None Include="ToolsAndData\MonsterData.xlsm" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="flatbuffers\base.h" />
+    <ClInclude Include="flatbuffers\code_generators.h" />
+    <ClInclude Include="flatbuffers\flatbuffers.h" />
+    <ClInclude Include="flatbuffers\flatc.h" />
+    <ClInclude Include="flatbuffers\flexbuffers.h" />
+    <ClInclude Include="flatbuffers\grpc.h" />
+    <ClInclude Include="flatbuffers\hash.h" />
+    <ClInclude Include="flatbuffers\idl.h" />
+    <ClInclude Include="flatbuffers\minireflect.h" />
+    <ClInclude Include="flatbuffers\reflection.h" />
+    <ClInclude Include="flatbuffers\reflection_generated.h" />
+    <ClInclude Include="flatbuffers\registry.h" />
+    <ClInclude Include="flatbuffers\stl_emulation.h" />
+    <ClInclude Include="flatbuffers\util.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

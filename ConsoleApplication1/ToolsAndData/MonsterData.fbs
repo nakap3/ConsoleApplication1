@@ -1,0 +1,21 @@
+﻿namespace Data;
+
+table MonsterData
+{
+  label:string;
+  name:string;
+  hp:short;
+  ap:short;
+  dp:short;
+}
+
+table MonsterList
+{
+  data:[MonsterData];
+}
+
+root_type MonsterList;
+
+
+file_identifier "MDFB";
+file_extension "mdfb";
