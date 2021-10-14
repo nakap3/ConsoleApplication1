@@ -104,7 +104,7 @@
       <Outputs>$(ProjectDir)ToolsAndData\MonsterData.mdfb;$(ProjectDir)ToolsAndData\MonsterData_generated.h;%(Outputs)</Outputs>
     </CustomBuildStep>
     <CustomBuildStep>
-      <Inputs>$(ProjectDir)ToolsAndData\MonsterData.json</Inputs>
+      <Inputs>$(ProjectDir)ToolsAndData\MonsterData.json;$(ProjectDir)ToolsAndData\MonsterData.fbs</Inputs>
       <Message>モンスターデータを変換します</Message>
     </CustomBuildStep>
   </ItemDefinitionGroup>

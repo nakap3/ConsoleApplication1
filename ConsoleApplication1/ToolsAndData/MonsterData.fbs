@@ -11,7 +11,7 @@ table MonsterData
 
 table MonsterList
 {
-  data:[MonsterData];
+  monster_list:[MonsterData];
 }
 
 root_type MonsterList;

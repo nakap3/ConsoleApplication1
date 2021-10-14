@@ -81,7 +81,7 @@ int main()
     {
         auto monsters = Data::GetMonsterList(binaryData.data());
         MonsterData monster;
-        for (const auto& it : *monsters->data())
+        for (const auto& it : *monsters->monster_list())
         {
             monster.label = it->label()->c_str();
             monster.name = it->name()->c_str();
